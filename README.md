@@ -1,5 +1,5 @@
 # Sayll_webpack
-[![Coverage Status](https://travis-ci.org/sayll/Karma-Mocha.svg?branch=master)](https://travis-ci.org)  [![Coverage Status](https://coveralls.io/repos/github/sayll/Karma-Mocha/badge.svg?branch=master)](https://coveralls.io)
+[![Coverage Status](https://travis-ci.org/sayll/Sayll_Karma.svg?branch=master)](https://travis-ci.org)  [![Coverage Status](https://coveralls.io/repos/github/sayll/Sayll_Karma/badge.svg?branch=master)](https://coveralls.io)
 
 ## 说明
 * Sayll_webpack:前端自动化构建模版;
