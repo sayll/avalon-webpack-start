@@ -64,7 +64,9 @@
   * 打包输出地址修改：config > buildDir ：'dist/'
   * 如果将source内的资源文件放cdn时，修改： config > sourcePath : "/" （指定到域名,默认为相对跟域名下）
 * PS:如需自定义文件目录，请参考 **config > app** 修改目录后，请将其指向正确的目录地址;app为根节点
-
-### 如许进行前端单元测试，可搭配**[Sayll_Karma](https://github.com/sayll/Sayll_Karma)** 
+  * 当你的目录文件发生变化时，请留意**app同级目录的package.json**
+  * scripts > build 与 scripts > dev 中文件是否正确指向 **build.config** 与 **dev.config**
+  
+### 如许进行前端单元测试，可搭配 [Sayll_Karma](https://github.com/sayll/Sayll_Karma)
 
 ### 喜欢的请点一下右上角的 `STAR`
