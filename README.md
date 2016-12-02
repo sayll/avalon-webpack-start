@@ -18,24 +18,20 @@
 * `|——app` 项目根
 * `|——|——component` 自定义组件
 * `|——|——html` 打包视图
-
 * `|——|——source` 资源文件
 * `|——|——|——css`
 * `|——|——|——js`
 * `|——|——|——font`
 * `|——|——|——img`
-
 * `|——|——static` 静态文件（含JS库和框架，模拟的接口数据等）
 * `|——|——|——config`
 * `|——|——|——json`
 * `|——|——|——lib`
-
 * `|——|——view` 针对html文件，对应文件夹名，此内的3类文件会被打包进最终生产的HTML
 * `|——|——|——index`
 * `|——|——|——|——index.pug` 此文件可选（如果使用传统的HTML编写则删除）
 * `|——|——|——|——index.js` 此文件可选（纯静态，无脚本可删除）
 * `|——|——|——|——index.scss` 此文件可选（无特殊样式编写可删除）
-
 * `|——|——webpack_config`
 * `|——|——|——base`
 * `|——|——|——|——config.js` 相关webpack包引入，及地址配置
@@ -44,7 +40,6 @@
 * `|——|——|——dev.config.js` webpack本地测试运行配置
 * `|——|——|——build.config.js` webpack打包配置
 * `|——|——package.json` **此为入口配置文件:** 根文件目录结构依赖与此文件，具体查看此文件的config参数
-
 * `|——.gitignore`
 * `|——package.json` **此为运行与依赖配置文件:** 稍后介绍
 * `|——README.md`
@@ -53,20 +48,20 @@
 ## 使用说明 （所有配置修改都基于**app目录内的package.json**中配置）
 * 下载本脚手架
 * 下载相关运行包
-  * 正常运行`npm install`
-  * 如果使用yarn：`yarn install` 
-  * 如果npm之类的下不动，就先`npm run cnpm` 下载阿里镜像
-  * 然后`cnpm install`
+ * 正常运行 **npm install**
+ * 如果使用yarn：**yarn install** 
+ * 如果npm之类的下不动，就先 **npm run cnpm** 下载阿里镜像
+ * 然后 **cnpm install**
 * 运行开发： npm run dev （默认测试网址为：http://127.0.0.1:1000/）
-  * 端口配置修改：config > devPort:1000
-  * 如果为纯HTML开发,请将此处：config > type > html : 'html'
-  * mobile: 为开启移动端自适应，只使用于手机端，才用rem开发;（才用方案[px2rem](https://github.com/songsiqi/px2rem)+[lib-flexible](https://github.com/amfe/lib-flexible)）
+ * 端口配置修改：config > devPort:1000
+ * 如果为纯HTML开发,请将此处：config > type > html : 'html'
+ * mobile: 为开启移动端自适应，只使用于手机端，才用rem开发;（才用方案[px2rem](https://github.com/songsiqi/px2rem)+[lib-flexible](https://github.com/amfe/lib-flexible)）
 * 运行打包： npm run build
-  * 打包输出地址修改：config > buildDir ：'dist/'
-  * 如果将source内的资源文件放cdn时，修改： config > sourcePath : "/" （指定到域名,默认为相对跟域名下）
+ * 打包输出地址修改：config > buildDir ：'dist/'
+ * 如果将source内的资源文件放cdn时，修改： config > sourcePath : "/" （指定到域名,默认为相对跟域名下）
 * PS:如需自定义文件目录，请参考 **config > app** 修改目录后，请将其指向正确的目录地址;app为根节点
-  * 当你的目录文件发生变化时，请留意**app同级目录的package.json**
-  * scripts > build 与 scripts > dev 中文件是否正确指向 **build.config** 与 **dev.config**
+ * 当你的目录文件发生变化时，请留意**app同级目录的package.json**
+ * scripts > build 与 scripts > dev 中文件是否正确指向 **build.config** 与 **dev.config**
   
 ## 如许进行前端单元测试，可搭配 [Sayll_Karma](https://github.com/sayll/Sayll_Karma)
 
