@@ -27,7 +27,7 @@ deleteFolder(cfg.build);
 /**
  * end
  * */
-module.exports = merge(config({debug: false, mobile: cfg.mobile,react:cfg.react}), {
+module.exports = merge(config({debug: false, mobile: cfg.mobile}), {
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({ //压缩代码
 			compress : {

@@ -2,9 +2,9 @@ console.time('start');
 fetch('http://www.lafilm.cn/api/v1/cms',{
 	method:'GET'
 }).then(function (response) {
-	console.log(22121);
+	console.log(221321);
 })
-
+document.getElementById('test2').innerHTML = 21.232;
 console.timeEnd('start');
 
 

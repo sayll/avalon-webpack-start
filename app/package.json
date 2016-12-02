@@ -5,7 +5,6 @@
     "main": "index.js",
     "config": {
         "mobile": false,
-        "react": false,
         "buildDir": "dist/",
         "sourcePath": "/",
         "type": {

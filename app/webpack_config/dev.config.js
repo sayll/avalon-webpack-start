@@ -3,7 +3,7 @@ var cfg = require('./base/config');
 var webpack          = cfg.pkg.webpack,
 		WebpackDevServer = require('webpack-dev-server');
 
-config = cfg.pkg.merge(config({debug: true, mobile: cfg.mobile, react: cfg.react}), {
+config = cfg.pkg.merge(config({debug: true, mobile: cfg.mobile}), {
 	
 	plugins  : [
 		new webpack.HotModuleReplacementPlugin(),

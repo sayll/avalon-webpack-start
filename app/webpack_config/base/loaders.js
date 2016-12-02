@@ -29,30 +29,16 @@ module.exports = function (option, cfg) {
 				include: [cfg.js, cfg.view, cfg.static],
 				loader : 'babel', //解析 es6
 				query  : {
-					presets       : (function () {
-						var presets = ['es2015', 'stage-0'];
-						if (option.react) {
-							presets.push('react');
-						}
-						return presets;
-					})(),
+					presets       : ['es2015', 'stage-0'],
 					cacheDirectory: true,
 					//在开发的时候才启用HMR和Catch Error
-					env           : (function () {
-						var development = {
-							'plugins': ['transform-runtime']
-						}
-						if (DEBUG) {
-							return {
-								"development": Object.assign(development, {"presets": ["react-hmre"]})
-							}
-						}
-						else {
-							return {
-								"development": development
-							}
-						}
-					})()
+					env           : {
+						/**
+						 * 只会对es6的语法进行转换，而不会对新api进行转换。
+						 * 如果需要转换新api，就要引入babel-polyfill
+						 * */
+						'plugins': ['transform-runtime']
+					}
 				}
 			},
 			{
