@@ -1,13 +1,22 @@
-# Karma - Mocha
-[![Coverage Status](https://travis-ci.org/sayll/Karma-Mocha.svg?branch=master)](https://travis-ci.org/sayll/Karma-Mocha)  [![Coverage Status](https://coveralls.io/repos/github/sayll/Karma-Mocha/badge.svg?branch=master)](https://coveralls.io/github/sayll/Karma-Mocha?branch=master)
+# Sayll_webpack
+[![Coverage Status](https://travis-ci.org/sayll/Karma-Mocha.svg?branch=master)](https://travis-ci.org)  [![Coverage Status](https://coveralls.io/repos/github/sayll/Karma-Mocha/badge.svg?branch=master)](https://coveralls.io)
 
 ## 说明
-* Karma-mocha是一个前端单元测试脚手架
-* 它可以选择浏览器测试环境，完成自动化前端单元测试。
-* 它可以与[Travis-ci](https://travis-ci.org)和[Coveralls](https://coveralls.io)完成对接
+* Sayll_webpack:前端自动化构建模版;
+* 它支持页面自动刷新;
+* 支持ES6新特性，最后打包转义为ES5代码;
+* 支持SCSS编写CSS代码，当然也可以使用Less及SASS，只要修改部分代码就能跑;
+* 支持PUG前端的模版引擎，当然也可以单纯只使用HTML，只需要修改一个配置文件;
+* 所有最终生成的JS，CSS文件都会自动添加到HTML里。
+* webpack模块化开发，所有img,json,js,html,pug,css,font都能require引入;
+* 还引入了手机开发模式，也只需要一个配置就能开启;
+* **最重要的是，它是支持文件修改前后对比，给它最后生成的文件名打上hash;保证页面的url永远为最新。避免缓存带来的影响;**
 * 迫不及待了吗？那么让我们进入正题吧！
 
-## 工具介绍
+## 目录结构
+* `|——app`
+* `|————component`
+* `|————html`
 
 ### Runner
   * 这里我们使用的Runner工具就是Google Angular 团队推出的 **karma**;
