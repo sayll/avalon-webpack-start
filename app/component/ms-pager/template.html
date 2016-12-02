@@ -1,0 +1,42 @@
+<ul class="pagination" ms-visible='@totalPages>1'>
+	<li class="first"
+	    ms-class='{disabled: @isDisabled("first", 1)}'>
+		<a ms-attr='{title:@getTitle("first")}'
+		   ms-click='@cbProxy($event,"first")'
+		>
+			{{@firstText}}
+		</a>
+	</li>
+	<li class="prev"
+	    ms-class='{disabled: @isDisabled("prev",1)}'>
+		<a ms-attr='{title:@getTitle("prev")}'
+		   ms-click='@cbProxy($event,"prev")'
+		>
+			{{@prevText}}
+		</a>
+	</li>
+	<li ms-for='page in @pages'
+	    ms-class='{active: page === @currentPage}' >
+		<a ms-attr='{title:@getTitle(page)}'
+		   ms-click='@cbProxy($event,page)'
+		>
+			{{page}}
+		</a>
+	</li>
+	<li class="next"
+	    ms-class='{disabled: @isDisabled("next",@totalPages)}'>
+		<a ms-attr='{title: @getTitle("next")}'
+		   ms-click='@cbProxy($event,"next")'
+		>
+			{{@nextText}}
+		</a>
+	</li>
+	<li class="last"
+	    ms-class='{disabled: @isDisabled("last",@totalPages)}'>
+		<a ms-attr='{title: @getTitle("last")}'
+		   ms-click='@cbProxy($event,"last")'
+		>
+			{{@lastText}}
+		</a>
+	</li>
+</ul>
