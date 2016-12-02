@@ -50,12 +50,13 @@
 * `|——README.md`
 
 
-### 使用说明 （所有配置修改都基于**app目录内的package.json**中配置）
+## 使用说明 （所有配置修改都基于**app目录内的package.json**中配置）
 * 下载本脚手架
 * 下载相关运行包
-  * 正常运行npm install 
-  * 如果使用阿里镜像的cnpm: cnpm install 
-  * 如果使用yarn：yarn install
+  * 正常运行`npm install`
+  * 如果使用yarn：`yarn install` 
+  * 如果npm之类的下不动，就先`npm run cnpm` 下载阿里镜像
+  * 然后`cnpm install`
 * 运行开发： npm run dev （默认测试网址为：http://127.0.0.1:1000/）
   * 端口配置修改：config > devPort:1000
   * 如果为纯HTML开发,请将此处：config > type > html : 'html'
@@ -67,6 +68,6 @@
   * 当你的目录文件发生变化时，请留意**app同级目录的package.json**
   * scripts > build 与 scripts > dev 中文件是否正确指向 **build.config** 与 **dev.config**
   
-### 如许进行前端单元测试，可搭配 [Sayll_Karma](https://github.com/sayll/Sayll_Karma)
+## 如许进行前端单元测试，可搭配 [Sayll_Karma](https://github.com/sayll/Sayll_Karma)
 
-### 喜欢的请点一下右上角的 `STAR`
+###喜欢的请点一下右上角的 `STAR` 如有问题，请提`issue`
