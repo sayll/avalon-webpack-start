@@ -55,7 +55,7 @@
 * 运行开发： npm run dev （默认测试网址为：http://127.0.0.1:1000/）
  * 端口配置修改：config > devPort:1000
  * 如果为纯HTML开发,请将此处：config > type > html : 'html'
- * mobile: 为开启移动端自适应，只使用于手机端，才用rem开发;（才用方案[px2rem](https://github.com/songsiqi/px2rem)+[lib-flexible](https://github.com/amfe/lib-flexible)）
+ * mobile默认为关闭: config > mobile : false; 为开启移动端自适应，只使用于手机端，才用rem开发;（才用方案[px2rem](https://github.com/songsiqi/px2rem)+[lib-flexible](https://github.com/amfe/lib-flexible)）
 * 运行打包： npm run build
  * 打包输出地址修改：config > buildDir ：'dist/'
  * 如果将source内的资源文件放cdn时，修改： config > sourcePath : "/" （指定到域名,默认为相对跟域名下）
@@ -63,6 +63,12 @@
  * 当你的目录文件发生变化时，请留意**app同级目录的package.json**
  * scripts > build 与 scripts > dev 中文件是否正确指向 **build.config** 与 **dev.config**
   
-## 如许进行前端单元测试，可搭配 [Sayll_Karma](https://github.com/sayll/Sayll_Karma)
+## 其他
+* 如需进行前端单元测试，可搭配 [Sayll_Karma](https://github.com/sayll/Sayll_Karma)
+* 如需React开发模版，可查看 [Sayll_React](https://github.com/sayll/Sayll_React)
 
 ###喜欢的请点一下右上角的 `STAR` 如有问题，请提`issue`
+* 重点提一下，如果为库或者不常改变的库，建议直接在app > static > lib > index.js中引入;
+* webpack 会单独将固定不变的此index.js单独打包为一个文件;
+* 而需要修改的公共代码，请在app > source > js > main.js中编写;
+* webpack会根据文件修改，自动在文件名中打上hash;
