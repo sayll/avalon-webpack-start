@@ -10,7 +10,7 @@ module.exports = (dev) => {
         exclude: [],
         include: [files.viewPath, files.staticPath, files.jsPath, files.htmlPath],
         use    : [{
-          loader: 'babel-loader',
+          loader: 'babel-loader?cacheDirectory',
           query : require('./babel')
         }]
       },

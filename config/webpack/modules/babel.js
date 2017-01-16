@@ -1,13 +1,14 @@
 module.exports = {
-  'compact': true,
   'presets': [
-    'es2015',
-    'latest',
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    //'latest', 目前会使tree-shaking失效（webpack2）
     'stage-0',
     'react',
-  ],
-  'plugins': [
-    //['import', [{libraryName: 'antd-mobile', style: 'css'/*true将启用less||sass*/}]]
   ],
   'env'    : {
     'development': {

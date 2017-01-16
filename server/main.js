@@ -2,12 +2,12 @@ const base          = require('../config/webpack/modules/base'),
       files         = require('../config/webpack/modules/files'),
       webpackConfig = require('../config/webpack/webpack.dev'),
       express       = require('express'),
-      webpack       = require('webpack'),
-      compress      = require('compression');
+      webpack       = require('webpack');
 
 const app = express();
 // Apply gzip compression
-app.use(compress());
+//const compress      = require('compression')
+//app.use(compress());
 
 /** -----------------------------------
  * Apply Webpack HMR Middleware
