@@ -1,50 +1,124 @@
 {
-  "name": "Sayll_webpack",
-  "version": "1.0.0",
-  "description": "Sayll_webpack",
-  "main": "lib/index.js",
+  "name": "webpack2-Scaffolding",
+  "version": "0.1.0",
+  "description": "webpack2脚手架，启用tree-shaking。移动开发+PC开发模式。react+redux。",
+  "author": {
+    "name": "Sayll",
+    "email": "kilol@qq.com",
+    "url": "https://github.com/sayll"
+  },
+  "license": "ISC",
   "scripts": {
-    "build": "webpack --profile --colors --display-modules  --config ./app/webpack_config/build.config",
-    "dev": "node ./app/webpack_config/dev.config",
-    "cnpm": "npm install -g cnpm --registry=https://registry.npm.taobao.org --save-dev"
+    "dll": "better-npm-run dll",
+    "dev": "better-npm-run dev",
+    "start": "npm run dll && npm run dev",
+    "clean": "rimraf build",
+    "build": "better-npm-run build",
+    "deploy": "npm run clean && npm run dll && npm run build",
+    "test": "better-npm-run test",
+    "test:coveralls": "cat ./build/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "visualizer": "better-npm-run visualizer",
+    "cnpm": "npm install cnpm -g --registry=https://registry.npm.taobao.org"
+  },
+  "betterScripts": {
+    "test": {
+      "command": "node ./node_modules/karma/bin/karma start config/karma.config",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "build": {
+      "command": "webpack --optimize-minimize --profile --colors --config config/webpack/webpack.build",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "dll": {
+      "command": "webpack --config config/webpack/webpack.dll",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "dev": {
+      "command": "node ./server/main",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "visualizer": {
+      "command": "webpack --config config/webpack/webpack.build",
+      "env": {
+        "NODE_ENV": "production",
+        "NODE_TEST": true
+      }
+    }
   },
   "bugs": {
-    "url": "https://github.com/sayll/Sayll_webpack/issues"
+    "url": "https://github.com/sayll/webpack2-Scaffolding/issues",
+    "email": "kilol@qq.com"
   },
-  "repository": "https://github.com/sayll/Sayll_webpack.git",
-  "author": "KEN <kilol@qq.com>",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayll/webpack2-Scaffolding.git"
+  },
+  "homepage": "https://github.com/sayll/webpack2-Scaffolding#readme",
   "dependencies": {
-    "autoprefixer": "^6.5.3",
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "babel-runtime": "^6.18.0",
-    "css-loader": "^0.26.0",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
-    "glob": "^7.1.1",
-    "html-webpack-plugin": "^2.24.1",
-    "image-webpack-loader": "^3.0.0",
-    "json-loader": "^0.5.4",
-    "lodash": "^4.17.2",
-    "node-sass": "^3.13.0",
-    "postcss-loader": "^1.1.1",
-    "postcss-px2rem": "^0.3.0",
-    "pug": "^2.0.0-beta6",
-    "pug-loader": "^2.3.0",
-    "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
-    "text-loader": "^0.0.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2",
-    "webpack-md5-hash": "^0.0.5",
-    "webpack-merge": "^1.0.2"
+    "babel-plugin-import": "^1.1.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "react-router": "^3.0.1",
+    "react-weui": "^1.0.4",
+    "redux": "^3.6.0",
+    "redux-saga": "^0.14.2"
   },
   "devDependencies": {
-    "coveralls": "^2.11.15"
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-istanbul": "^3.1.2",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "better-npm-run": "0.0.13",
+    "chai": "^3.5.0",
+    "css-loader": "^0.26.1",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.5",
+    "file-loader": "^0.9.0",
+    "glob": "^7.1.1",
+    "happypack": "^3.0.2",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.26.0",
+    "image-webpack-loader": "^3.1.0",
+    "json-loader": "^0.5.4",
+    "karma": "^1.4.0",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-webpack": "^2.0.1",
+    "mocha": "^3.2.0",
+    "phantomjs-prebuilt": "^2.1.14",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.2.2",
+    "postcss-px2rem": "^0.3.0",
+    "postcss-url": "^5.1.2",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.0-rc.6",
+    "webpack-dashboard": "^0.2.1",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0",
+    "webpack-md5-hash": "0.0.5",
+    "webpack-merge": "^1.1.2",
+    "webpack-visualizer-plugin": "^0.1.10"
+  },
+  "peerDependencies": {
+    "happypack": "^3.0.2"
   }
 }

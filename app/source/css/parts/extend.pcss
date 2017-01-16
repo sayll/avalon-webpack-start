@@ -1,0 +1,33 @@
+.clear:after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* 居中 */
+.centerTranslate{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centerTranslateX{
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.centerTranslateY{
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* 扑克效果 */
+.poker{
+  transition: all .2s linear;
+}
+.poker:hover{
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0);
+}
