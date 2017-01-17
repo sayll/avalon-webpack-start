@@ -63,7 +63,7 @@ $ npm start                     # Compile and launch
 
 ## 样式
 
-所有的css和sass都支持会被预处理。只要被引入，都会经过[PostCSS](https://github.com/postcss/postcss)压缩，加前缀。在生产环境下会提取到一个css文件下。
+使用[PostCSS](https://github.com/postcss/postcss)(可添加替换sass,less)预处理css
 
 ## 服务端
 
