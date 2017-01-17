@@ -6,7 +6,7 @@ module.exports = function (config) {
     // 使用的测试框架
     frameworks       : ['mocha'],
     // 需要生成的代码报告
-    reporters        : ['progress', /*'coverage'*/],
+    reporters        : ['progress', 'coverage'],
     // 需要测试的文件地址
     files            : [
       `${files.testName}/*.spec.js`,
