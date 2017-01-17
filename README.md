@@ -51,9 +51,6 @@ $ npm start                     # Compile and launch
 │   ├── html                 # 多页或单页应用的入口HTML
 │   ├── source               # 公共的资源文件
 │   ├── static               # 静态文件(不要到处imported源文件，所有内部文件通过index.js引入，配置后单独打包)
-│   ├── store                # Redux指定块
-│   │   ├── createStore.js   # 创建和使用redux store
-│   │   └── reducers.js      # Reducer注册和注入
 │   └── view                 # 主路由和异步分割点
 │       └── index            # 匹配html文件夹中的index.html。（css,js文件名对应文件夹名，可直接打包无需单独引入）
 │           ├── index.js     # 直接与index.html匹配的入口文件，可以作为单页应用的入口，在内部定义自己的项目目录
