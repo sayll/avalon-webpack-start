@@ -1,6 +1,6 @@
 const files     = require('./webpack/modules/files');
 
-let karmaConfig = {
+let config = {
   basePath         : '../',
   // 使用的测试框架
   frameworks       : ['mocha'],
@@ -69,4 +69,4 @@ let karmaConfig = {
   }
 };
 
-module.exports  = (cfg) => cfg.set(karmaConfig);
+module.exports  = (cfg) => cfg.set(config);
