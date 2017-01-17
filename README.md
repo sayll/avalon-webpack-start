@@ -1,4 +1,6 @@
 # webpack2-Scaffolding
+[![Coverage Status](https://travis-ci.org/sayll/webpack2-Scaffolding.svg?branch=master)](https://travis-ci.org/sayll/webpack2-Scaffolding)  [![Coverage Status](https://coveralls.io/repos/github/sayll/webpack2-Scaffolding/badge.svg)](https://coveralls.io/github/sayll/webpack2-Scaffolding)
+## 说明
 
 webpack2脚手架,抢先预览版。
 
@@ -72,3 +74,4 @@ $ npm start                     # Compile and launch
 Babel被配置[babel-plugin-transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime)可以让代码更优化。dll文件加速打包和开发速度。资源的特殊匹配，避免引入无关的包文件。
 
 ### 后续功能将慢慢完善，文档方面也会不全。案例也会编写。敬请期待！
+

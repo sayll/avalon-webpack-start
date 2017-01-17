@@ -1,6 +1,6 @@
-.idea
 node_modules
-build
 redux-master
-yarn-error.log
-npm-debug.log
+*.log
+*.log.*
+.idea/*
+build

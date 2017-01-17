@@ -10,6 +10,7 @@ module.exports = {
     'stage-0',
     'react',
   ],
+  'plugins': [],
   'env'    : {
     'development': {
       'presets': ['react-hmre'],
