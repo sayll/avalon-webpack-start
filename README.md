@@ -29,7 +29,7 @@ $ npm start                     # Compile and launch
 |------------------|-----------|
 |`start`|第一次运行启用。生成DLL文件，服务启动在1000端口，代码热替换开启。|
 |`deploy`|删除旧文件，生成新DLL，打包相关文件（默认目录~/build）。|
-|`dev`|与`npm start`类似相同,只有但DLL文件存在时可用。加快开发速度。|
+|`dev`|与`npm start`类似相同,只有当DLL文件存在时可用。加快开发速度。|
 |`test`|开启Karma测试并生成覆盖率报告。|
 |`visualizer`|打包资源分析|
 |`build`|同`dev`在DLL文件存在时，加快打包速度。|
@@ -38,7 +38,7 @@ $ npm start                     # Compile and launch
 |`dll`|适合第一次启动时运行，生成DLL文件。|
 * 第一次运行，推荐使用 `start`,后续调试使用`dev`
 * 打包推荐使用`deploy`
-* 目前所有相关开发打包都需依赖`dll`,当不清楚时，运行一下`npm run dll`,再完成接下来的操作。
+* 目前所有相关开发打包都需依赖`dll`,当不清楚或运行出错时，尝试运行一下`npm run dll`,再完成接下来的操作。
 
 ## 程序目录
 
