@@ -73,5 +73,5 @@ $ npm start                     # Compile and launch
 
 Babel被配置[babel-plugin-transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime)可以让代码更优化。dll文件加速打包和开发速度。资源的特殊匹配，避免引入无关的包文件。
 
-### 后续功能将慢慢完善，文档方面也会不全。案例也会编写。敬请期待！
+### 后续功能将慢慢完善，文档方面也会补全。案例也会编写。敬请期待！
 
