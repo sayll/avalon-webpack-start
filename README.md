@@ -29,7 +29,7 @@ $ npm start                     # Compile and launch
 |------------------|-----------|
 |`start`|第一次运行启用。生成DLL文件，服务启动在1000端口，代码热替换开启。|
 |`deploy`|删除旧文件，生成新DLL，打包相关文件（默认目录~/build）。|
-|`dev`|与`npm start`类似相同,只有但DLL文件存在时可用。加快开发速度。|
+|`dev`|与`npm start`类似相同,只有当DLL文件存在时可用。加快开发速度。|
 |`test`|开启Karma测试并生成覆盖率报告。|
 |`visualizer`|打包资源分析|
 |`build`|同`dev`在DLL文件存在时，加快打包速度。|
@@ -38,7 +38,7 @@ $ npm start                     # Compile and launch
 |`dll`|适合第一次启动时运行，生成DLL文件。|
 * 第一次运行，推荐使用 `start`,后续调试使用`dev`
 * 打包推荐使用`deploy`
-* 目前所有相关开发打包都需依赖`dll`,当不清楚时，运行一下`npm run dll`,再完成接下来的操作。
+* 目前所有相关开发打包都需依赖`dll`,当不清楚或运行出错时，尝试运行一下`npm run dll`,再完成接下来的操作。
 
 ## 程序目录
 
@@ -63,7 +63,7 @@ $ npm start                     # Compile and launch
 
 ## 样式
 
-所有的css和sass都支持会被预处理。只要被引入，都会经过[PostCSS](https://github.com/postcss/postcss)压缩，加前缀。在生产环境下会提取到一个css文件下。
+使用[PostCSS](https://github.com/postcss/postcss)(可添加替换sass,less)预处理css
 
 ## 服务端
 
@@ -73,5 +73,5 @@ $ npm start                     # Compile and launch
 
 Babel被配置[babel-plugin-transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime)可以让代码更优化。dll文件加速打包和开发速度。资源的特殊匹配，避免引入无关的包文件。
 
-### 后续功能将慢慢完善，文档方面也会不全。案例也会编写。敬请期待！
+### 后续功能将慢慢完善，文档方面也会补全。案例也会编写。敬请期待！
 
