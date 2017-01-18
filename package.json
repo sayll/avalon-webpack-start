@@ -23,14 +23,14 @@
   },
   "betterScripts": {
     "test": {
-      "command": "node ./node_modules/karma/bin/karma start config/karma.config",
+      "command": "node ./node_modules/karma/bin/karma start config/karma.conf",
       "env": {
         "NODE_ENV": "production",
         "NODE_TEST": "production"
       }
     },
     "test:dev": {
-      "command": "node ./node_modules/karma/bin/karma start config/karma.config",
+      "command": "node ./node_modules/karma/bin/karma start config/karma.conf",
       "env": {
         "NODE_ENV": "production",
         "NODE_TEST": "development"
@@ -93,6 +93,7 @@
     "babel-preset-stage-0": "^6.16.0",
     "better-npm-run": "0.0.13",
     "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.0",
     "express": "^4.14.0",
@@ -122,7 +123,7 @@
     "sinon": "^1.17.7",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.0-rc.7",
+    "webpack": "^2.2.0",
     "webpack-dashboard": "^0.2.1",
     "webpack-dev-middleware": "^1.9.0",
     "webpack-hot-middleware": "^2.15.0",

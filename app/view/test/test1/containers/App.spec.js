@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 describe('输出', function () {
   it('DOM', function () {
     let dom = shallow(<App />);
-    console.log(dom.is('div'));
+    console.log(dom.find('h1').text());
     expect(test(2)).to.be.equal(2);
   });
   it('a = a', function () {
