@@ -41,15 +41,25 @@ module.exports = (cfg) => cfg.set({
   // 超时退出
   captureTimeout   : 60000,
   webpack          : {
-    resolve: require('./webpack/modules/resolve'),
-    module : {
+    /*target   : 'node',
+    node     : {
+      fs: 'empty'
+    },*/
+    resolve  : require('./webpack/modules/resolve'),
+    module   : {
       loaders: [{
         test   : /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader : 'babel-loader',
         query  : require('./webpack/modules/babel')
       }]
-    }
+    },
+    externals: {
+      'react/addons'                  : true,
+      'react/lib/ExecutionEnvironment': true,
+      'react/lib/ReactContext'        : true
+    },
+    devtool  : 'inline-source-map'
   },
   webpackMiddleware: {
     noInfo: true
