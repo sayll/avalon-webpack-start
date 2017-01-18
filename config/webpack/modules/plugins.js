@@ -1,4 +1,4 @@
-const files     = require('./files'),
+const files     = require('../base/files'),
       webpack   = require('webpack');
 let vendorsJson = files.dllPath + '/vendors.json';
 

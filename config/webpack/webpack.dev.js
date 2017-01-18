@@ -1,4 +1,4 @@
-const base            = require('./modules/base.js'),
+const base            = require('./base/base.js'),
       webpack         = require('webpack'),
       merge           = require('webpack-merge'),
       Dashboard       = require('webpack-dashboard'),

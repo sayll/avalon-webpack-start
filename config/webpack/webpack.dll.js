@@ -1,5 +1,5 @@
-const base       = require('./modules/base.js'),
-      files      = require('./modules/files'),
+const base       = require('./base/base.js'),
+      files      = require('./base/files'),
       path       = require('path'),
       webpack    = require('webpack'),
       Visualizer = require('webpack-visualizer-plugin');

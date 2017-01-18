@@ -16,6 +16,7 @@
     "build": "better-npm-run build",
     "deploy": "npm run clean && npm run test && npm run dll && npm run build",
     "test": "better-npm-run test",
+    "test:dev": "better-npm-run test:dev",
     "test:coveralls": "cat ./build/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "visualizer": "better-npm-run visualizer",
     "cnpm": "npm install cnpm -g --registry=https://registry.npm.taobao.org"
@@ -24,13 +25,21 @@
     "test": {
       "command": "node ./node_modules/karma/bin/karma start config/karma.config",
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "production",
+        "NODE_TEST": "production"
+      }
+    },
+    "test:dev": {
+      "command": "node ./node_modules/karma/bin/karma start config/karma.config",
+      "env": {
+        "NODE_ENV": "production",
+        "NODE_TEST": "development"
       }
     },
     "build": {
       "command": "webpack --optimize-minimize --profile --colors --config config/webpack/webpack.build",
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "production"
       }
     },
     "dll": {
@@ -49,7 +58,7 @@
       "command": "webpack --config config/webpack/webpack.build",
       "env": {
         "NODE_ENV": "production",
-        "NODE_TEST": true
+        "NODE_TEST": "production"
       }
     }
   },
@@ -108,7 +117,9 @@
     "postcss-loader": "^1.2.2",
     "postcss-px2rem": "^0.3.0",
     "postcss-url": "^5.1.2",
+    "react-addons-test-utils": "^15.4.2",
     "rimraf": "^2.5.4",
+    "sinon": "^1.17.7",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.0-rc.7",

@@ -1,4 +1,4 @@
-module.exports = {
+let babel = {
   'presets': [
     [
       "es2015",
@@ -20,3 +20,8 @@ module.exports = {
     }
   }
 };
+
+if (!!process.env.NODE_TEST) { // 启用测试模式
+  babel.plugins.push('istanbul');
+}
+module.exports = babel;
