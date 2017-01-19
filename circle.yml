@@ -6,7 +6,7 @@ machine:
 ## Customize dependencies
 dependencies:
   pre:
-    - npm install coffeescript # install from a different package manager
+    - npm install
     - npm install coveralls # use a custom version of bundler
     - npm run test
     - npm run test:coveralls
