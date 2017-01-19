@@ -1,9 +1,12 @@
+## Customize the test machine
+machine:
+  node:
+    version: 6.1.0
+
+## Customize dependencies
 dependencies:
-  override:
-    - npm install
-    - npm install coveralls
-  test:
-    post:
-      - npm run test
-    post:
-      - test:coveralls
+  pre:
+    - npm install coffeescript # install from a different package manager
+    - npm install coveralls # use a custom version of bundler
+    - npm run test
+    - npm run test:coveralls
