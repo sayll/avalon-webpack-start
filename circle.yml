@@ -1,0 +1,9 @@
+dependencies:
+  override:
+    - npm install
+    - npm install coveralls
+  test:
+    post:
+      - npm run test
+    post:
+      - test:coveralls
