@@ -21,6 +21,7 @@ $ npm install                   # Install project dependencies
 $ npm start                     # Compile and launch
 ```
 关于package.json中dependencies的相关依赖，请自行下载。本例子以react为框架
+
 如果一切顺利,就能正常打开端口:127.0.0.1:1000
 
 开发过程中，你用得最多的会是`npm start`，但是这里还有很多其它的处理：
