@@ -7,7 +7,7 @@ let config           = require('./webpack.config.js')({dev: false});
 /** --------------------
  * 打包资源，性能分析
  * */
-if (!!process.env.NODE_TEST) {
+if (process.env.NODE_TEST === 'production') {
   config.plugins.push(
     new Visualizer({
       filename: './statistics.html'

@@ -1,5 +1,5 @@
-const base          = require('../config/webpack/modules/base'),
-      files         = require('../config/webpack/modules/files'),
+const base          = require('../config/webpack/base/base'),
+      files         = require('../config/webpack/base/files'),
       webpackConfig = require('../config/webpack/webpack.dev'),
       express       = require('express'),
       webpack       = require('webpack');

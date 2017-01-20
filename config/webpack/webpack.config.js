@@ -1,5 +1,5 @@
-const base              = require('./modules/base.js'),
-      files             = require('./modules/files'),
+const base              = require('./base/base.js'),
+      files             = require('./base/files'),
       path              = require('path'),
       util              = require('util'),
       glob              = require('glob'),
@@ -153,19 +153,9 @@ module.exports = (option = {dev: process.env.NODE_ENV === 'development'}) => {
     return obj2;
   }
   
-  webpackConfig.entry = objConcat(Glob.fileCss, objConcat(Glob.fileJs, {
-    'Common': ['lib'/*'core-js', 'babel-polyfill'*/],
-    // 'Main'  : [path.resolve(files.jsPath, 'main.js')]
-  }));
+  webpackConfig.entry = objConcat(Glob.fileCss, objConcat(Glob.fileJs, require('./modules/entry')));
   
-  webpackConfig.resolve = {
-    alias           : {
-      'lib': path.resolve(files.staticPath, "index.js")
-    },
-    modules         : ['node_modules'],
-    moduleExtensions: ["-loader"],
-    extensions      : ['.js', '.jsx', '.json']
-  };
+  webpackConfig.resolve = require('./modules/resolve');
   
   webpackConfig.output = {
     path              : path.join(files.root, files.buildName),

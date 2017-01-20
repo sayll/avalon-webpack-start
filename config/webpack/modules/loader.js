@@ -1,4 +1,4 @@
-const files             = require('./files'),
+const files             = require('../base/files'),
       ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (dev) => {

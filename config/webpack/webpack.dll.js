@@ -1,5 +1,5 @@
-const base       = require('./modules/base.js'),
-      files      = require('./modules/files'),
+const base       = require('./base/base.js'),
+      files      = require('./base/files'),
       path       = require('path'),
       webpack    = require('webpack'),
       Visualizer = require('webpack-visualizer-plugin');
@@ -30,27 +30,8 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production'),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       }
-    }),
-    new webpack.optimize.UglifyJsPlugin({// webpack压缩，控制台输出删减
-      exclude : /\.min\.js$/,
-      mangle  : true,
-      compress: {
-        warnings    : false,
-        screw_ie8   : true,
-        conditionals: true,
-        unused      : true,
-        comparisons : true,
-        sequences   : true,
-        dead_code   : true,
-        evaluate    : true,
-        if_return   : true,
-        join_vars   : true,
-      },
-      output  : {
-        comments: false
-      },
     }),
     new Visualizer({
       filename: './vendors.html'

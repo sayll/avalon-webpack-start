@@ -14,13 +14,14 @@ webpack2脚手架,抢先预览版。
 
 确认好你的环境配置，然后就可以开始以下步骤。
 
+PS：关于package.json中dependencies的相关依赖，请自行下载。本例子以react为框架
+
 ```bash
 $ git clone https://github.com/sayll/webpack2-Scaffolding.git
 $ cd webpack2-Scaffolding
 $ npm install                   # Install project dependencies
 $ npm start                     # Compile and launch
 ```
-关于package.json中dependencies的相关依赖，请自行下载。本例子以react为框架
 
 如果一切顺利,就能正常打开端口:127.0.0.1:1000
 
