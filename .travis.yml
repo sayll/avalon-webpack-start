@@ -11,6 +11,3 @@ script:
   - npm run test
 after_script:
   - npm run test:coveralls
-addons:
-    code_climate:
-        repo_token: e30474104e8620d162f4392f63058e029729a5bf8a2b5d139aaf22747c3d76cf
