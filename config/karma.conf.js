@@ -54,11 +54,11 @@ module.exports = (cfg) => cfg.set({
         query  : require('./webpack/modules/babel')
       }]
     },
-    externals: {
+    /*externals: {
       'react/addons'                  : true,
       'react/lib/ExecutionEnvironment': true,
       'react/lib/ReactContext'        : true
-    },
+    },*/
     devtool  : 'inline-source-map'
   },
   webpackMiddleware: {
