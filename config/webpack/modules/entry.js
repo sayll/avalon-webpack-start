@@ -1,4 +1,17 @@
-module.exports = {
-  'Common': ['lib'/*'core-js', 'babel-polyfill'*/],
-  // 'Main'  : [path.resolve(files.jsPath, 'main.js')]
-};
+let base       = require('../base/base');
+
+module.exports = ((entry) => {
+  let All = {};
+  
+  if (base.mainJS) {
+    const path  = require('path'),
+          files = require('../base/files');
+    All         = Object.assign(entry, {
+      'Main': [path.resolve(files.jsPath, 'main.js')]
+    });
+  }
+  
+  return base.mainJS ? All : entry;
+})({
+  'Common': ['lib', 'css'/*'core-js', 'babel-polyfill'*/]
+});

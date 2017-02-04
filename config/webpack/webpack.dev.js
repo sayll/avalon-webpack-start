@@ -20,13 +20,5 @@ module.exports = merge(config, {
       minimal: true,
       port   : base.devPort
     }).setData)
-    /*new HappyPack({ // 等待优化
-            id        : 'happybabel',
-            loaders   : ['babel-loader'],
-            threads   : 4,
-            cache     : true,
-            verbose   : true,
-            debug     : false
-          })*/
   ],
 });

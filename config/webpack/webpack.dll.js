@@ -4,13 +4,8 @@ const base       = require('./base/base.js'),
       webpack    = require('webpack'),
       Visualizer = require('webpack-visualizer-plugin');
 const vendors    = [
-  'react',
-  'react-dom',
-  'react-redux',
-  'react-router',
-  'redux',
-  'redux-saga',
-  'react-weui'
+  'avalon2',
+  'jquery'
 ];
 
 module.exports = {

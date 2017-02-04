@@ -6,14 +6,14 @@ let babel = {
         "modules": false
       }
     ],
-    //'latest', 目前会使tree-shaking失效（webpack2）
+    'latest', // 原先会使tree-shaking失效（webpack2）
     'stage-0',
-    'react',
+    //'react',
   ],
-  'plugins': [],
+  'plugins': ['transform-runtime'],
   'env'    : {
     'development': {
-      'presets': ['react-hmre'],
+      //'presets': ['react-hmre'],
     },
     'production' : {
       'presets': [],
