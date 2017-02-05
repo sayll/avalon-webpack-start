@@ -16,7 +16,7 @@ module.exports = {
 ###
 |配置项|解释|参数|
 |------------------|-----------|-----------|
-|`mainJS`|默认不开放，当`[app/static/index.js]`(/app/static/index.js)过大，无法满足你的要求时，开放第二个公共入口|`true`or`false`|
+|`mainJS`|默认不开放，当[`app/static/index.js`](/app/static/index.js)模块过多，无法满足你的要求时，开放第二个公共入口|`true`or`false`|
 |`devHost`|建议保持不变||
 |`devPort`|端口号|最好4位数字|
 |`viewType`|模版引擎|自由选择，默认原生HTML|
