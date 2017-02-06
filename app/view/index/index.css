@@ -4,9 +4,6 @@ body {
 
 #content {
   padding: 5rem;
-  & i{
-    color: #AC9062;
-  }
 }
 
 .ms-controller{

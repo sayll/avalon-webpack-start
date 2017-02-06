@@ -1,6 +1,6 @@
 @import "../font/icon/iconfont.css";
-@import "./parts/normalize.pcss";
-@import "./parts/class.pcss";
+@import "./parts/normalize.css";
+@import "./parts/class.css";
 
 html, body, #body{
   max-width: 900px; /*px*/
