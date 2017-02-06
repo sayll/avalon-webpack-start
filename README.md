@@ -7,8 +7,6 @@
 
 ### <a href="https://segmentfault.com/a/1190000008249713"><img src='http://imgsrc.baidu.com/forum/w%3D580/sign=ee4b8d37a964034f0fcdc20e9fc17980/28381f30e924b8990cb13ad26c061d950b7bf64f.jpg' height='160'></a>
 
-* 重要的事情说三遍
-
 ## 介绍
 
 webpack2脚手架正式版，一个多资源统筹的脚手架。</br>
@@ -135,4 +133,3 @@ $ npm start                     # Compile and launch
 
 <img src='https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=405cc666d543ad4ba67b4ec6b2327697/d058ccbf6c81800a80b7b2cdb53533fa838b47a6.jpg' height='160'>
 
-* 你们的**Star**是我更新最大的动力</br>
