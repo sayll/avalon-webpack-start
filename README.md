@@ -118,7 +118,7 @@ $ npm start                     # Compile and launch
 2. 使用框架(avalon)或库(jquery)【[更多说明](/docs/basics/Frame.md)】
 3. 设置全局变量。虽引入公共库，但每次调用都需重新声明。所以就有了公共文件来提前声明。【[更多说明](/docs/basics/Common.md)】
 4. 使用Css预处理器([更多说明](/docs/loaders))
-5. 使用CND([更多说明](/docs/webpack))
+5. 使用CDN([更多说明](/docs/webpack))
 6. 修改目录结构([更多说明](/docs/webpack))
 
 最后
