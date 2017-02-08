@@ -4,7 +4,7 @@
 ## 介绍
 
 这个一个以webpack2为基础的脚手架正式版，一个多资源统筹的脚手架。</br>
-本项目使用[`avalon2`](http://avalonjs.coding.me/)作为演示框架。</br>
+本项目使用[`avalon2`](https://github.com/RubyLouvre/avalon)作为演示框架。</br>
 为兼容低版本浏览器，我也是强烈推荐一下它。市面上应该也算唯一能够支持到IE8以下的MVVM框架了吧。
 
 ## 致各位,亲
