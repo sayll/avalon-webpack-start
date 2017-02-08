@@ -1,6 +1,6 @@
 {
-  "name": "webpack2-Scaffolding",
-  "version": "0.1.0",
+  "name": "avalon-webpack-start",
+  "version": "0.2.0",
   "description": "webpack2，启用tree-shaking。移动开发+PC开发模式。react+redux。",
   "author": {
     "name": "Sayll",
@@ -71,14 +71,14 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/sayll/webpack2-Scaffolding/issues",
+    "url": "https://github.com/sayll/avalon-webpack-start/issues",
     "email": "kilol@qq.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sayll/webpack2-Scaffolding.git"
+    "url": "git+https://github.com/sayll/avalon-webpack-start.git"
   },
-  "homepage": "https://github.com/sayll/webpack2-Scaffolding#readme",
+  "homepage": "https://github.com/sayll/avalon-webpack-start#readme",
   "dependencies": {
     "avalon2": "^2.2.4",
     "jquery": "^3.1.1"
