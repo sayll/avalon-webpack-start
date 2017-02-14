@@ -11,9 +11,9 @@ module.exports = (cfg) => cfg.set({
   // 需要测试的文件地址
   files            : [
     `${files.appName}/**/*.spec.js`,
-    `${files.testName}/*.spec.js`,
+    `${files.testName}/**/*.spec.js`,
     {
-      pattern : `${files.testName}/bundler.spec.js`,
+      pattern : `${files.testName}/bundler.js`,
       watched : false,
       served  : true,
       included: true
@@ -23,7 +23,7 @@ module.exports = (cfg) => cfg.set({
   exclude          : [],
   // 配置预处理器,ES6代码需要预处理
   preprocessors    : {
-    [`${files.testName}/*.spec.js`]  : ['webpack'],
+    [`${files.testName}/**/*.js`]  : ['webpack'],
     [`${files.appName}/**/*.spec.js`]: ['webpack']
   },
   // 端口号
