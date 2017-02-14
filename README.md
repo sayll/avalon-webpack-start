@@ -120,7 +120,7 @@ $ npm start                     # Compile and launch
 4. 使用Css预处理器([更多说明](/docs/loaders))
 5. 使用CDN([更多说明](/docs/webpack))
 6. 修改目录结构([更多说明](/docs/webpack))
-7. 单元测试([更多说明](/docs/webpack/tests.md))
+7. 单元测试([更多说明](/docs/webpack/Tests.md))
 
 发布
 
