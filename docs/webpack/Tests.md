@@ -37,7 +37,7 @@ $ npm run test:dev
 
 ### 基础配置
 引入自己喜欢的断言库
-* 文件地址：[`/tests/bundler.js`](/test/bundler.js)
+* 文件地址：[`/tests/bundler.js`](/tests/bundler.js)
 
 ### 深度定制
 [官方API](http://karma-runner.github.io/1.0/config/configuration-file.html)
