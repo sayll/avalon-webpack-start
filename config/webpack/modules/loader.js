@@ -82,8 +82,8 @@ module.exports = (dev) => {
       test   : test, // 标准的CSS编译
       include: path,
       loaders: require('extract-text-webpack-plugin').extract({
-        fallbackLoader: 'style-loader',
-        loader        : loader ? [cssLoader, loader, 'postcss-loader'] : [cssLoader, 'postcss-loader']
+        fallback: 'style-loader',
+        use        : loader ? [cssLoader, loader, 'postcss-loader'] : [cssLoader, 'postcss-loader']
       })
     })
   }

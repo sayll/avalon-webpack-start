@@ -59,10 +59,7 @@ module.exports = [
     },
     loaders     : [{
       loader: 'babel-loader',
-      query : {
-        cacheDirectory: true,
-        plugins       : require('./babel')
-      }
+      query : require('./babel')
     }]
   })
 ];

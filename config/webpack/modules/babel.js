@@ -1,4 +1,5 @@
 let babel = {
+  cacheDirectory: true,
   'presets': [
     [
       "es2015",
@@ -6,16 +7,16 @@ let babel = {
         "modules": false
       }
     ],
-    'latest', // 原先会使tree-shaking失效（webpack2）
+    'latest',
     'stage-0',
     //'react',
   ],
   'plugins': ['transform-runtime'],
-  'env'    : {
+  'env': {
     'development': {
       //'presets': ['react-hmre'],
     },
-    'production' : {
+    'production': {
       'presets': [],
     }
   }
