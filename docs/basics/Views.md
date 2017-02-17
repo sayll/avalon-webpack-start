@@ -1,19 +1,22 @@
 # Views
 
 ## 说明
-1. 创建html文件位于`app/html/demo.html`时
+一. 创建html文件位于`app/html/demo.html`时
+
 配置view中的资源文件：
 
 * `app/view/demo/demo.js`
 * `app/view/demo/demo.css`
 
-2. 创建html文件位于`app/html/test/index.html`时
+二. 创建html文件位于`app/html/test/index.html`时
+
 配置view中的资源文件：
 
 * `app/view/test/index/index.js`
 * `app/view/test/index/index.css`
 
-3. 创建单页应用时`app/html/index.html`
+三. 创建单页应用时`app/html/index.html`
+
 配置view中的资源文件：
 
 * `app/view/index/index.js`
