@@ -6,38 +6,43 @@ module.exports = (dev) => {
     //noParse: /jquery|vue/, // 忽略某些查找的库，提高构建速度
     rules: [
       {
-        test   : /\.(js|jsx)$/,
+        test: /\.(js|jsx)$/,
         exclude: [],
         include: [files.viewPath, files.staticPath, files.jsPath, files.htmlPath],
-        use    : ['happypack/loader?id=cJSX']
+        use: ['happypack/loader?id=cJSX']
       },
       { // 处理HTML关于src链接问题
-        test   : /\.(html)$/,
-        include: [files.htmlPath, files.viewPath],
-        use    : ['html-loader']
+        test: /\.(html)$/,
+        include: [files.htmlPath],
+        use: 'html-loader'
       },
       {
-        test   : /\.(jpg|jpeg|png|gif|svg)$/,
+        test: /\.(html)$/,
+        exclude: [files.htmlPath],
+        use: 'text-loader'
+      },
+      {
+        test: /\.(jpg|jpeg|png|gif|svg)$/,
         include: [files.imgPath, files.viewPath],
-        use    : [
+        use: [
           {
             loader: 'url-loader',
-            query : {
+            query: {
               limit: 2000,
-              name : 'assets/[name]-[hash:8].[ext]'
+              name: 'assets/[name]-[hash:8].[ext]'
             }
           }
         ]
       },
       {
-        test   : /\.(svg|ico|woff|eot|ttf)$/,
+        test: /\.(svg|ico|woff|eot|ttf)$/,
         include: [files.fontPath, files.viewPath],
-        use    : [
+        use: [
           {
             loader: 'url-loader',
-            query : {
+            query: {
               limit: 1,
-              name : 'assets/[name]-[hash:8].[ext]'
+              name: 'assets/[name]-[hash:8].[ext]'
             }
           }
         ]
@@ -52,19 +57,19 @@ module.exports = (dev) => {
 
   let cssLoader = {
     loader: 'css-loader',
-    query : {
-      modules          : false,
-      outputStyle      : 'expanded',
-      sourceMap        : dev,
+    query: {
+      modules: false,
+      outputStyle: 'expanded',
+      sourceMap: dev,
       sourceMapContents: dev
     }
   };
 
   function testLoader(test, loader, path) {
     Config.rules.push({ // 独立CSS文件
-      test   : test, // 标准的CSS编译
+      test: test, // 标准的CSS编译
       include: path,
-      use    : loader ? [
+      use: loader ? [
           'style-loader',
           cssLoader,
           loader,
@@ -77,13 +82,13 @@ module.exports = (dev) => {
     })
   }
 
-  function Loader(test, loader, path=[files.viewPath, files.cssPath]) {
+  function Loader(test, loader, path = [files.viewPath, files.cssPath]) {
     Config.rules.push({ // 独立CSS文件
-      test   : test, // 标准的CSS编译
+      test: test, // 标准的CSS编译
       include: path,
       loaders: require('extract-text-webpack-plugin').extract({
         fallback: 'style-loader',
-        use        : loader ? [cssLoader, loader, 'postcss-loader'] : [cssLoader, 'postcss-loader']
+        use: loader ? [cssLoader, loader, 'postcss-loader'] : [cssLoader, 'postcss-loader']
       })
     })
   }
