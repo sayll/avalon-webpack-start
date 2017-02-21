@@ -3,24 +3,25 @@ const base       = require('./base/base.js'),
       path       = require('path'),
       webpack    = require('webpack'),
       Visualizer = require('webpack-visualizer-plugin');
-const vendors    = [
+const vendors = [
   'avalon2',
   'jquery'
 ];
 
 module.exports = {
-  output : {
-    path    : files.dllPath,
+  output: {
+    path: files.dllPath,
     filename: '[name].js',
-    library : '[name]',
+    library: '[name]',
   },
-  entry  : {
+  resolve: require('./modules/resolve'),
+  entry: {
     vendor: vendors,
   },
   plugins: [
     new webpack.DllPlugin({
-      path   : path.join(files.dllPath, 'vendors.json'),
-      name   : '[name]',
+      path: path.join(files.dllPath, 'vendors.json'),
+      name: '[name]',
       context: '/',
     }),
     new webpack.DefinePlugin({
