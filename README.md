@@ -7,14 +7,6 @@
 本项目使用[`avalon2`](https://github.com/RubyLouvre/avalon)作为演示框架。</br>
 为兼容低版本浏览器，我也是强烈推荐一下它。市面上应该也算唯一能够支持到IE8以下的MVVM框架了吧。
 
-## 致各位,亲
-
-* 请各位看客老爷不要吝啬自己的**Star**，先右上角**Star**一下呗。
-* 右上角**Star**。
-* 右上角**Star**。
-
-### <a href="https://segmentfault.com/a/1190000008249713"><img src='http://imgsrc.baidu.com/forum/w%3D580/sign=ee4b8d37a964034f0fcdc20e9fc17980/28381f30e924b8990cb13ad26c061d950b7bf64f.jpg' height='160'></a>
-
 ### 关于【Webpack】
 1. 服务端使用Koa。需要注意的是，只有一个目的那就是提供了`webpack-dev-middleware` 和 `webpack-hot-middleware`（代码热替换）。使用自定义的Koa程序替换[webpack-dev-server](https://github.com/webpack/webpack-dev-server)，让它更容易实现universal 渲染和为了不使这个包过于庞大。
 2. 针对不同的loader采用了多线程编译，极大的加快了编译速度。
@@ -139,5 +131,5 @@ $ npm start                     # Compile and launch
 
 * 亲不要吝啬自己的**Star**，先右上角**Star**一下呗。
 
-<img src='https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=405cc666d543ad4ba67b4ec6b2327697/d058ccbf6c81800a80b7b2cdb53533fa838b47a6.jpg' height='160'>
+<a href="https://segmentfault.com/a/1190000008249713"><img src='https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=405cc666d543ad4ba67b4ec6b2327697/d058ccbf6c81800a80b7b2cdb53533fa838b47a6.jpg' height='160'></a>
 
