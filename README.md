@@ -1,6 +1,5 @@
 # avalon-webpack-start
-[![Coverage Status](https://travis-ci.org/sayll/avalon-webpack-start.svg?branch=master)](https://travis-ci.org/sayll/avalon-webpack-start)  [![Coverage Status](https://coveralls.io/repos/github/sayll/avalon-webpack-start/badge.svg)](https://coveralls.io/github/sayll/avalon-webpack-start)
-
+[![Coverage Status](https://travis-ci.org/sayll/avalon-webpack-start.svg?branch=master)](https://travis-ci.org/sayll/avalon-webpack-start)  [![Coverage Status](https://coveralls.io/repos/github/sayll/avalon-webpack-start/badge.svg)](https://coveralls.io/github/sayll/avalon-webpack-start) [![Coverage Status](https://codeclimate.com/github/sayll/avalon-webpack-start/badges/gpa.svg)](https://codeclimate.com/github/sayll/avalon-webpack-start)
 ## 介绍
 
 这个一个以webpack2为基础的脚手架正式版，一个多资源统筹的脚手架。</br>
