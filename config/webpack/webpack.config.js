@@ -6,23 +6,23 @@ const base              = require('./base/base.js'),
       HtmlWebpackPlugin = require('html-webpack-plugin'),
       ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = (option = {dev: process.env.NODE_ENV === 'development'}) => ((Glob, objConcat, createHtml) => {
+module.exports = (option = { dev: process.env.NODE_ENV === 'development' }) => ((Glob, objConcat, createHtml) => {
 
   /**
    * Config
    * */
   let Config = {
-    entry  : objConcat(Glob.fileCss, objConcat(Glob.fileJs, require('./modules/entry'))),
+    entry: objConcat(Glob.fileCss, objConcat(Glob.fileJs, require('./modules/entry'))),
     resolve: require('./modules/resolve'),
-    output : {
-      path              : path.join(files.root, files.buildName),
-      publicPath        : base.cdnPath, //资源文件引用路径
-      filename          : Glob.jsBundle,
+    output: {
+      path: path.join(files.root, files.buildName),
+      publicPath: base.cdnPath, //资源文件引用路径
+      filename: Glob.jsBundle,
       crossOriginLoading: false, // 是否允许跨域加载[anonymous,use-credentials,false]
-      chunkFilename     : files.jsPath + '/asyn/[name].js',
-      sourceMapFilename : '[file].map'
+      chunkFilename: '/async/[name].js',
+      sourceMapFilename: '[file].map'
     },
-    module : require('./modules/loader')(option.dev),
+    module: require('./modules/loader')(option.dev),
     plugins: require('./modules/plugins')
   };
 
@@ -34,7 +34,6 @@ module.exports = (option = {dev: process.env.NODE_ENV === 'development'}) => ((G
   createHtml(Config, Glob.fileHtml, files.htmlPath, base.viewType, option.dev);
   return Config;
 })(
-  
   /**
    * 处理所需文件的文件目录，输出对应文件的对象
    * */
@@ -86,27 +85,27 @@ module.exports = (option = {dev: process.env.NODE_ENV === 'development'}) => ((G
 
     let fileHtml  = Object.keys(getEntry({
           globPath: files.htmlPath + '/**/*',
-          pathDir : files.htmlPath + '/'
+          pathDir: files.htmlPath + '/'
         }, VIEWS)),
         fileJs    = getEntry({
           globPath: files.viewPath + '/**/*.?(js|jsx)',
-          pathDir : files.viewPath + '/'
+          pathDir: files.viewPath + '/'
         }, VIEWS),
         fileCss   = getEntry({
           globPath: files.viewPath + '/**/*.?(css|pcss|sass|scss|less)',
-          pathDir : files.viewPath + '/'
+          pathDir: files.viewPath + '/'
         }, VIEWS),
         jsBundle  = debug ? path.join(files.jsName, util.format('[name].js')) : path.join(files.jsName, util.format('[name].%s.[chunkhash:8].js', base.version)),
         cssBundle = debug ? path.join(files.cssName, util.format('[name].css')) : path.join(files.cssName, util.format('[name].%s.[contenthash:8].css', base.version));
     return {
-      'fileHtml' : fileHtml,
-      'fileJs'   : fileJs,
-      'fileCss'  : fileCss,
-      'jsBundle' : jsBundle,
+      'fileHtml': fileHtml,
+      'fileJs': fileJs,
+      'fileCss': fileCss,
+      'jsBundle': jsBundle,
       'cssBundle': cssBundle
     }
   })(option.dev),
-  
+
   /**
    * 处理文件页面资源对应关系
    * */
@@ -121,7 +120,7 @@ module.exports = (option = {dev: process.env.NODE_ENV === 'development'}) => ((G
     });
     return obj2;
   },
-  
+
   /**
    * config:webpack的config
    * htmlFiles: 某目录下的所有HTML对象
@@ -130,7 +129,7 @@ module.exports = (option = {dev: process.env.NODE_ENV === 'development'}) => ((G
    * dev: 是否开发模式，对应引入热替换模块
    * */
   (config, htmlFiles, htmlPath, viewType, debug) => {
-    
+
     if (debug) {
       Object.keys(config.entry).forEach((e) => {
         config.entry[e].unshift(
@@ -139,23 +138,23 @@ module.exports = (option = {dev: process.env.NODE_ENV === 'development'}) => ((G
         )
       });
     }
-    
+
     // 遍历创建所有HTML
     htmlFiles.forEach(function (pathname) {
       let conf = {
         filename: pathname + '.html', //生成的html存放路径，相对于path
         template: path.resolve(htmlPath, pathname + '.' + viewType), //html模板路径
-        minify  : {
-          removeComments               : true,
-          collapseWhitespace           : true,
-          removeRedundantAttributes    : true,
-          useShortDoctype              : true,
-          removeEmptyAttributes        : true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
           removeStyleLinkTypeAttributes: true,
-          keepClosingSlash             : true,
-          minifyJS                     : true,
-          minifyCSS                    : true,
-          minifyURLs                   : true
+          keepClosingSlash: true,
+          minifyJS: true,
+          minifyCSS: true,
+          minifyURLs: true
         }
       };
       if (pathname in config.entry) { // 同HTML文件名的JS分离出来
