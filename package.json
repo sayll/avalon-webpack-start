@@ -9,13 +9,12 @@
   },
   "license": "ISC",
   "scripts": {
-    "start": "npm run dll:dev && npm run dev",
+    "start": "npm run dll && npm run dev",
     "dev": "better-npm-run dev",
     "clean": "rimraf build",
     "build": "better-npm-run build",
     "deploy": "npm run clean && npm run test && npm run dll && npm run build",
     "dll": "better-npm-run dll",
-    "dll:dev": "better-npm-run dll:dev",
     "test": "better-npm-run test",
     "test:dev": "better-npm-run test:dev",
     "test:coveralls": "cat ./build/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
@@ -40,12 +39,6 @@
       "command": "webpack --optimize-minimize --config config/webpack/webpack.dll",
       "env": {
         "NODE_ENV": "production"
-      }
-    },
-    "dll:dev": {
-      "command": "webpack --config config/webpack/webpack.dll",
-      "env": {
-        "NODE_ENV": "development"
       }
     },
     "test": {
