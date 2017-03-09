@@ -9,7 +9,7 @@
 ```js
 module.exports = {
   devHost : '0.0.0.0',
-  devPort : '1000',
+  devPort : '3000',
   viewType: 'html',
   // 此处配置针对Css预处理器
   cssType : 'css', /* sass,scss,less,pcss,css...*/

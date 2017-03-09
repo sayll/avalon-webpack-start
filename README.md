@@ -22,7 +22,6 @@
 3. 针对移动开发，有独特的处理方案。（具体文档等待补充）
 4. 可导入字体和字体图标，操作非常简单。（如[阿里系icon](http://www.iconfont.cn/)）【[配置文档](/docs/basics/Icon.md)】
 5. 每次修改都会生成新的文件名，防止旧样式缓存带来的影响。（与JS间做了特殊处理，通过JS引入的CSS不会因JS改变而改变它的hash值）
-6. 针对开发模式启用修改自动刷新页面。（做了特殊处理，发布模式将得到优化）
 
 ### 关于【Js】
 1. 支持ES6的最新特性
@@ -53,7 +52,7 @@ $ npm install                   # Install project dependencies
 $ npm start                     # Compile and launch
 ```
 
-如果一切顺利,就能正常打开端口:[http://localhost:1000/](http://localhost:1000/)
+如果一切顺利,就能正常打开端口:[http://localhost:3000/](http://localhost:3000/)
 
 开发过程中，你用得最多的会是`npm start`，但是这里还有很多其它的处理：
 
