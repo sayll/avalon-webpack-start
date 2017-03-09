@@ -29,6 +29,7 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       }
     }),
+    new webpack.optimize.UglifyJsPlugin(),
     new Visualizer({
       filename: './vendors.html'
     })
