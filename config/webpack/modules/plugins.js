@@ -2,19 +2,36 @@ const base = require('../base/base'),
       files     = require('../base/files'),
       HappyPack = require('happypack'),
       webpack   = require('webpack');
-let vendorsJson = files.dllPath + '/vendors.json';
+function cHappypack(id, loaders) {
+  return new HappyPack({
+    id: id,
+    debug: false,
+    verbose: false,
+    cache: true,
+    threads: 4,
+    cacheContext: {
+      env: process.env.NODE_ENV
+    },
+    loaders: loaders
+  })
+}
+
+const vendorsJson = files.dllPath + '/vendors.json';
 
 module.exports = [
   new webpack.NoEmitOnErrorsPlugin(),
+
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
     },
   }),
+
   new webpack.DllReferencePlugin({
     context : '/',
     manifest: require(vendorsJson)
   }),
+
   new webpack.LoaderOptionsPlugin({
     minimize: true,
     options : {
@@ -51,15 +68,11 @@ module.exports = [
         ]:[require('autoprefixer')({browsers: ['> 1%', 'last 5 versions', 'Firefox ESR'], cascade: false})]
     }
   }),
-  new HappyPack({
-    id          : 'cJSX',
-    cache       : true,
-    cacheContext: {
-      env: process.env.NODE_ENV
-    },
-    loaders     : [{
-      loader: 'babel-loader',
-      query : require('./babel')
-    }]
-  })
+
+  cHappypack('HTML', ['html-loader']),
+
+  cHappypack('JSX', [{
+    loader: 'babel-loader',
+    query: require('./babel')
+  }]),
 ];
