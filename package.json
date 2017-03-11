@@ -1,7 +1,7 @@
 {
   "name": "avalon-webpack-start",
   "version": "0.2.1",
-  "description": "webpack2，启用tree-shaking。移动开发+PC开发模式。react+redux。",
+  "description": "webpack2脚手架，启用tree-shaking。",
   "author": {
     "name": "Sayll",
     "email": "kilol@qq.com",
