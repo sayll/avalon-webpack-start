@@ -1,8 +1,25 @@
-languages:
-  Ruby: true
-  JavaScript: true
-  PHP: true
-  Python: true
+engines:
+  csslint:
+    enabled: true
+  duplication:
+    enabled: false
+    config:
+      languages:
+      - javascript
+  eslint:
+    enabled: true
+    checks:
+      linebreak-style:
+        enabled: false
+      global-require:
+        enabled: false
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - app/**/*
 exclude_paths:
-  - "app/source/css/library/weui.css"
-  - "app/static/tools/fetch.js"
+  - app/static/tools/**/*
+  - app/source/font/**/*
+  - app/source/css/library/**/*
+  - app/source/css/parts/**/*

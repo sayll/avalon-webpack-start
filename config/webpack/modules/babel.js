@@ -1,4 +1,4 @@
-let babel = {
+const babel = {
 
   cacheDirectory: true,
 
@@ -28,7 +28,7 @@ let babel = {
 
 };
 
-if (!!process.env.NODE_TEST) { // 启用测试模式
+if (process.env.NODE_TEST) { // 启用测试模式
   babel.plugins.push('istanbul');
 }
 module.exports = babel;
