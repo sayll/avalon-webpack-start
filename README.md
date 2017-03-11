@@ -5,7 +5,7 @@
 
 <b>低版本IE 用户请转至：[ie-webpack-start](https://github.com/sayll/ie-webpack-start)</b>
 
-<b>群交流：617828832</b>
+<b>Q群交流：617828832</b>
 
 ## 目录简介
 1. [介绍](#介绍) 
@@ -266,7 +266,7 @@ $ npm run deploy
 
 ## 最重要的事情
 
-* 亲不要吝啬自己的**Star**，右上角**Star**一下咯。
+* 亲不要吝啬自己的**Star**，右上角**Star**一下呗。
 
 <a href="https://segmentfault.com/a/1190000008249713"><img src='https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=405cc666d543ad4ba67b4ec6b2327697/d058ccbf6c81800a80b7b2cdb53533fa838b47a6.jpg' height='160'></a>
 
