@@ -4,8 +4,7 @@ const base       = require('./base/base.js'),
       webpack    = require('webpack'),
       Visualizer = require('webpack-visualizer-plugin');
 const vendors = [
-  'avalon2',
-  'jquery'
+  'avalon2'
 ];
 
 module.exports = {

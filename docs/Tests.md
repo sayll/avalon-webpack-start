@@ -1,5 +1,22 @@
 # 单元测试
 
+## 开启配置
+* 下载依赖
+``` base
+$ npm install mocha chai karma karma-coverage karma-mocha karma-webpack karma-phantomjs-launcher phantomjs-prebuilt --save-dev
+```
+* 配置文件package.json
+```
+{
+...
+"scripts": {
+"deploy": "npm run clean && npm run test && npm run dll && npm run build",
+}
+...
+}
+```
+这样打包文件的时候就会自动进行测试。
+
 ## 注意
 编写测试文件之后，通过以下命令最终打包到发布环境时。
 
@@ -31,7 +48,7 @@ $ npm run test:dev
 
 ## 文件测试范围
 
-* 所有[`/tests`](/test) 与 [`/app`](/app) 内的以xx.spec.js为后缀的文件都将被测试。
+* 所有[`/tests`](/tests) 与 [`/app`](/app) 内的以xx.spec.js为后缀的文件都将被测试。
 
 ## 配置项
 

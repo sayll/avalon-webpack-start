@@ -1,10 +1,2 @@
-@import "../font/icon/iconfont.css";
+/*@import "../font/icon/iconfont.css";*/
 @import "./parts/normalize.css";
-@import "./parts/class.css";
-
-html, body, #body{
-  max-width: 900px; /*px*/
-  height: 100%;
-  margin: 0 auto;
-  color: #f9cd0b;
-}

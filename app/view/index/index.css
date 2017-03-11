@@ -1,9 +1,9 @@
 body {
-  background: url('../../source/img/avatar.jpg');
+  background: url('../../source/img/avatar.jpg') no-repeat;
 }
 
 #content {
-  padding: 5rem;
+  padding: 100px 300px;
 }
 
 .ms-controller{

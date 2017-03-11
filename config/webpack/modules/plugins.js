@@ -1,4 +1,4 @@
-const base = require('../base/base'),
+const base      = require('../base/base'),
       files     = require('../base/files'),
       HappyPack = require('happypack'),
       webpack   = require('webpack');
@@ -28,15 +28,15 @@ module.exports = [
   }),
 
   new webpack.DllReferencePlugin({
-    context : '/',
+    context: '/',
     manifest: require(vendorsJson)
   }),
 
   new webpack.LoaderOptionsPlugin({
     minimize: true,
-    options : {
+    options: {
       context: files.appPath,
-      postcss: base.cssType === 'pcss'?[
+      postcss: base.cssType === 'pcss' ? [
           /* function vr(css) { // postCss插件DEMO
             // 设置 line-height.
             var lineHeight = 32;
@@ -65,7 +65,10 @@ module.exports = [
             remPrecision: 8,
             baseDpr     : 2 // 默认2倍视角
           })*/
-        ]:[require('autoprefixer')({browsers: ['> 1%', 'last 5 versions', 'Firefox ESR'], cascade: false})]
+        ] : [require('autoprefixer')({
+          browsers: ['> 1%', 'last 5 versions', 'Firefox ESR'],
+          cascade: false
+        })]
     }
   }),
 

@@ -1,5 +1,7 @@
 let babel = {
+
   cacheDirectory: true,
+
   'presets': [
     [
       "es2015",
@@ -7,19 +9,23 @@ let babel = {
         "modules": false
       }
     ],
-    'latest',
-    'stage-0',
-    //'react',
+    'stage-2',
+    // Stage 2 is "draft", 4 is finished, 0 is strawMan.
   ],
-  'plugins': ['transform-runtime'],
+
+  'plugins': ['transform-runtime',],
+
   'env': {
     'development': {
-      //'presets': ['react-hmre'],
+      'presets': [],
+      'plugins': [],
     },
     'production': {
       'presets': [],
+      'plugins': [],
     }
   }
+
 };
 
 if (!!process.env.NODE_TEST) { // 启用测试模式
