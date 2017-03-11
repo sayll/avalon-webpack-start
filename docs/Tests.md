@@ -3,7 +3,7 @@
 ## 开启配置
 * 下载依赖
 ``` base
-$ npm install mocha chai karma karma-coverage karma-mocha karma-webpack karma-phantomjs-launcher phantomjs-prebuilt --save-dev
+$ npm run installKarma
 ```
 * 配置文件package.json
 ```

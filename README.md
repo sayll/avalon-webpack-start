@@ -5,6 +5,8 @@
 
 <b>低版本IE 用户请转至：[ie-webpack-start](https://github.com/sayll/ie-webpack-start)</b>
 
+群交流：617828832
+
 ## 目录简介
 1. [介绍](#介绍) 
 2. [程序目录](#程序目录)
@@ -254,13 +256,17 @@ $ npm run deploy
   * 当单元测试功能开启时，`deploy`将添加一个检测项。只有所有测试通过时，才能正常打包。速度慢，安全系数最高。（默认关闭，开启请参考：[启动配置](/docs/Tests.md)）
 2. 打包文件为`build`文件夹，请以此为根目录。
 
+## 常见问题
+
+[常见问题](/docs/Issue.md)
+
 ## 更新日志
 
 [更新详情](/docs/Update.md)
 
 ## 最重要的事情
 
-* 亲不要吝啬自己的**Star**，先右上角**Star**一下呗。
+* 亲不要吝啬自己的**Star**，右上角**Star**一下咯。
 
 <a href="https://segmentfault.com/a/1190000008249713"><img src='https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=405cc666d543ad4ba67b4ec6b2327697/d058ccbf6c81800a80b7b2cdb53533fa838b47a6.jpg' height='160'></a>
 
