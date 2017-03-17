@@ -5,8 +5,6 @@
 
 <b>低版本IE 用户请转至：[ie-webpack-start](https://github.com/sayll/ie-webpack-start)</b>
 
-<b>Q群交流：617828832</b>
-
 ## 目录简介
 1. [介绍](#介绍) 
 2. [程序目录](#程序目录)
