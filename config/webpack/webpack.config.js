@@ -19,7 +19,7 @@ module.exports = (option = { dev: process.env.NODE_ENV === 'development' }) => (
       publicPath: base.cdnPath, //资源文件引用路径
       filename: Glob.jsBundle,
       crossOriginLoading: false, // 是否允许跨域加载[anonymous,use-credentials,false]
-      chunkFilename: '/async/[name].js',
+      chunkFilename: 'async/[name].js',
       sourceMapFilename: '[file].map'
     },
     module: require('./modules/loader')(option.dev),
