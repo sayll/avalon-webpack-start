@@ -1,7 +1,6 @@
 const base              = require('./base/base.js'),
       files             = require('./base/files'),
       path              = require('path'),
-      util              = require('util'),
       glob              = require('glob'),
       HtmlWebpackPlugin = require('html-webpack-plugin'),
       ExtractTextPlugin = require('extract-text-webpack-plugin');
