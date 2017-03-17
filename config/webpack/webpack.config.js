@@ -95,8 +95,8 @@ module.exports = (option = { dev: process.env.NODE_ENV === 'development' }) => (
           globPath: files.viewPath + '/**/*.?(css|pcss|sass|scss|less)',
           pathDir: files.viewPath + '/'
         }, VIEWS),
-        jsBundle  = debug ? path.join(files.jsName, util.format('[name].js')) : path.join(files.jsName, util.format('[name].[chunkhash:8].js')),
-        cssBundle = debug ? path.join(files.cssName, util.format('[name].css')) : path.join(files.cssName, util.format('[name].[contenthash:8].css'));
+        jsBundle  = debug ? `${files.jsName}/[name].js` : `${files.jsName}/[name].[chunkhash:8].js`,
+        cssBundle = debug ? `${files.cssName}/[name].css` : `${files.cssName}/[name].[contenthash:8].css`;
     return {
       'fileHtml': fileHtml,
       'fileJs': fileJs,
