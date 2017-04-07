@@ -28,8 +28,18 @@ module.exports = (dev) => {
             loader: 'url-loader',
             query: {
               limit: 2000,
-              publicPath: '../../',
+              publicPath: '/',
               name: 'assets/[name]-[hash:8].[ext]'
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              progressive: true,
+              pngquant: {
+                quality: '65-90',
+                speed: 4
+              }
             }
           }
         ]
@@ -42,7 +52,7 @@ module.exports = (dev) => {
             loader: 'url-loader',
             query: {
               limit: 1,
-              publicPath: '../../',
+              publicPath: '/',
               name: 'assets/[name]-[hash:8].[ext]'
             }
           }
