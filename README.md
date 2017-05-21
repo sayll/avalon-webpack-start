@@ -1,6 +1,8 @@
 # avalon-webpack-start
 [![Coverage Status](https://travis-ci.org/sayll/avalon-webpack-start.svg?branch=master)](https://travis-ci.org/sayll/avalon-webpack-start)  [![Coverage Status](https://coveralls.io/repos/github/sayll/avalon-webpack-start/badge.svg)](https://coveralls.io/github/sayll/avalon-webpack-start) [![Coverage Status](https://codeclimate.com/github/sayll/avalon-webpack-start/badges/gpa.svg)](https://codeclimate.com/github/sayll/avalon-webpack-start)
 
+<b>Vue 用户请转至：[vue-start](https://github.com/sayll/vue-start)</b>
+
 <b>React 用户请转至：[react-webpack-start](https://github.com/sayll/react-webpack-start)</b>
 
 <b>低版本IE 用户请转至：[ie-webpack-start](https://github.com/sayll/ie-webpack-start)</b>
