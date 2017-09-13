@@ -1,0 +1,60 @@
+env:
+  es6: true
+  node: true
+  mocha: true
+  browser: true
+
+# parser: babel-eslint # Es5 解析器
+
+extends:
+  - airbnb
+  #- eslint:recommended
+
+parserOptions:
+  allowImportExportEverywhere: true
+  ecmaVersion: 8
+  ecmaFeatures:
+    jsx: true
+    globalReturn: true
+    impliedStrict: true
+    experimentalObjectRestSpread: true
+  sourceType: module
+
+#plugins:
+#  - react
+
+rules:
+  arrow-parens:
+    - warn
+    - as-needed
+  brace-style: off
+  comma-dangle:
+    - error
+    - only-multiline
+  consistent-return: off # 总返回value
+  eol-last: off
+  import/no-unresolved: off
+  global-require: off
+
+  # 自定义模块警告
+  linebreak-style: off
+  no-bitwise: off # 禁用位运算
+  no-console: off
+  no-plusplus: off
+  no-underscore-dangle: off
+  no-unused-vars: warn
+  no-trailing-spaces: off # 禁止多余空格
+  no-unused-expressions: off #  a && b
+  max-len: off # 禁止单行超出100字节
+  quotes:
+    - error
+    - single
+  spaced-comment: off
+  semi: off
+
+globals:
+  module: false
+  window: false
+  document: false
+  avalon: true
+  localStorage: true

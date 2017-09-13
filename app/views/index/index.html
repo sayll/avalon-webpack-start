@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome">
+  <meta name="keyword" content="">
+  <meta name="description" content="">
+  <meta name="author" content="KEN,saytxk@gmail.com">
+  <title>Title</title>
+</head>
+<body>
+<div ms-controller="app" class="ms-controller">
+  <input ms-duplex="@name" />
+  <p>Hello,{{@name}}!</p>
+  <ul>
+    <li ms-for="($index,el) in @array">{{$index}}--{{el}}</li>
+  </ul>
+</div>
+
+<script>
+  var scripts = []
+
+  !('assign' in Object) && scripts.unshift('/static/lib/polyfills.js')
+
+  scripts.map(function (src) {
+    var scriptElement = document.createElement('script')
+    scriptElement.async = false
+    scriptElement.src = src
+    document.head.appendChild(scriptElement)
+  })
+</script>
+
+</body>
+</html>

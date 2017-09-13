@@ -1,0 +1,6 @@
+## 项目
+*.pcss
+internals
+
+## Node.js
+node_modules
