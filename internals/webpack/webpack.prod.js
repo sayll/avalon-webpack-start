@@ -102,5 +102,5 @@ if (utils.build.productionGzip) {
 // 资源分析仪
 if (process.env.$Analyzer) {
   const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-  common.plugins.push(new BundleAnalyzerPlugin())
+  module.exports.plugins.push(new BundleAnalyzerPlugin())
 }
