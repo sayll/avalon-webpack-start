@@ -16,16 +16,7 @@ module.exports = webpackMerge(common, {
   devtool: 'cheap-module-eval-source-map',
   plugins: [
     // 热更新
-    new webpack.HotModuleReplacementPlugin(),
-    new IncludeAssetsPlugin({
-      assets: [`${utils.path.dll.replace(`${utils.path.dist}/`, '')}/vendors.js`],
-      append: false,
-      hash: true
-    }),
-    new webpack.DllReferencePlugin({
-      context: '/',
-      manifest: require(utils.resolve(utils.path.dll, `vendors.json`))
-    })
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
@@ -41,3 +32,17 @@ module.exports = webpackMerge(common, {
     ]
   }
 })
+
+utils.vendors.length && (
+  module.exports.plugins.push(
+    new IncludeAssetsPlugin({
+      assets: [`${utils.path.dll.replace(`${utils.path.dist}/`, '')}/vendors.js`],
+      append: false,
+      hash: true
+    }),
+    new webpack.DllReferencePlugin({
+      context: '/',
+      manifest: require(utils.resolve(utils.path.dll, `vendors.json`))
+    })
+  )
+)
