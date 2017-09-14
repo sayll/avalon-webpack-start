@@ -2,6 +2,9 @@ const webpack = require('webpack')
 
 const utils = require('./utils')
 
+// 没有依赖，跳出执行
+!utils.vendors.length && process.exit(0)
+
 module.exports = {
   devtool: 'eval',
   entry: {

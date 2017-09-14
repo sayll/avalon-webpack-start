@@ -10,9 +10,9 @@ const common = require('./webpack.common')
 
 // 导出配置
 module.exports = webpackMerge(common, {
-  entry: {
+  entry: Object.assign({}, utils.vendors.length && {
     vendors: utils.vendors
-  },
+  }),
   devtool: utils.isDev ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
   plugins: [
     // 清除构建前文件
