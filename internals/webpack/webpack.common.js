@@ -58,6 +58,14 @@ module.exports = {
         exclude: file => !!file.match(/node_modules/)
       },
       {
+        test: /\.(css|pcss)$/,
+        include: /node_modules/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
         test: /\.(png|svg|jpe?g|gif)$/,
         include: [utils.resolve(utils.path.app)],
         use: [{

@@ -13,7 +13,7 @@
 本版本删减了许多模块及功能，让脚手架更轻型，更易扩展，自定义。
 本项目使用[`avalon2`](https://github.com/RubyLouvre/avalon)作为演示框架,演示如何进入开发。
 
-#### 关于本项目功能
+### 关于本项目功能
 1. 服务端使用Express。需要注意的是，只有一个目的那就是提供了`webpack-dev-middleware` 和 `webpack-hot-middleware`（代码热替换）。使用自定义的Express程序替换[webpack-dev-server](https://github.com/webpack/webpack-dev-server)，让它更容易实现universal 渲染和为了不使这个包过于庞大。
 2. 针对不同的loader采用了多线程编译，极大的加快了编译速度。
 3. 使用webpack.DllReferencePlugin提取固定资源，加快编译与打包速度。
@@ -41,12 +41,12 @@
 
 ## 项目启动
 
-#### 环境配置
+### 环境配置
 * 为了把保证项目正常运行，请自行更新相关环境。
 1. 安装[node.js](https://nodejs.org/)
 2. 安装[git](https://git-scm.com/)
 
-#### 依赖配置
+### 依赖配置
 1. 首先clone项目
 ```bash
 $ git clone https://github.com/sayll/avalon-webpack-start.git
